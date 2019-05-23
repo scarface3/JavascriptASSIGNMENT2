@@ -1,4 +1,4 @@
-const workersProfile = [
+const namesofworkers = [
     {
         firstName : "Vanessa"  ,
         lastName : "Rogers",
@@ -361,26 +361,26 @@ let obj = {
 
 //TO PRINT THE FIRST NAME AND LAST NAME OF ALL WORKERS
 console.log("THE FIRST NAME AND LAST NAME OF ALL WORKERS");
-workersProfile.forEach(names => console.log(`${names.firstName} ${names.lastName}`));
+namesofworkers.forEach(names => console.log(`${names.firstName} ${names.lastName}`));
 
 //TO PRINT THE TOTAL SALARIES OF ALL WORKERS
 console.log("THE TOTAL SALARIES OF ALL WORKERS");
-const totalSalary = workersProfile.reduce((acc, curr) => acc + curr.salary, 0);
-console.log(totalSalary);
+const sumofSalary = namesofworkers.reduce((acc, curr) => acc + curr.salary, 0);
+console.log(sumofSalary);
 
 //TO PRINT THE AVERAGE AGE OF ALL WORKERS
 console.log("THE AVERAGE AGE OF ALL WORKER");
-const workeraverageAge = workersProfile.reduce((acc, curr) => acc + curr.age/2, 0);
+const workeraverageAge = namesofworkers.reduce((acc, curr) => acc + curr.age/2, 0);
 console.log(workeraverageAge);
 
 //TO PRINT THE ARRAY OF WORKERS THAT ARE ABOVE THE AGE OF 20
 console.log("WORKERS THAT ARE ABOVE THE AGE OF 20");
-let over = workersProfile.filter(over => over.age > 20);
+let over = namesofworkers.filter(over => over.age > 20);
 console.log(over);
 
 //TO PRINT NEW SALARIES OF THE WORKERS
 console.log("NEW SALARIES OF THE WORKERS");
-workersProfile.map(newsalary => newsalary.salary * 2).forEach(newsalary => (console.log(newsalary)));
+namesofworkers.map(newsalary => newsalary.salary * 2).forEach(newsalary => (console.log(newsalary)));
 
 // FUNCTION THAT TAKE ARRAY OF NUMBER AS A PARAMETER...
 console.log("FUNCTION THAT TAKE ARRAY OF NUMBER AS A PARAMETER...");
