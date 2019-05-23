@@ -351,13 +351,6 @@ const namesofworkers = [
         salary : 132894
     }
 ];
-//ANOTHER OBJECT
-let obj = {
-    firstName : "Vanessa" ,
-    lastName : "Rogers" ,
-    gender : "Female" ,
-    age : 19,
-    salary : 60193};
 
 //TO PRINT THE FIRST NAME AND LAST NAME OF ALL WORKERS
 console.log("THE FIRST NAME AND LAST NAME OF ALL WORKERS");
@@ -370,13 +363,16 @@ console.log(sumofSalary);
 
 //TO PRINT THE AVERAGE AGE OF ALL WORKERS
 console.log("THE AVERAGE AGE OF ALL WORKER");
-const workeraverageAge = namesofworkers.reduce((acc, curr) => acc + curr.age/2, 0);
-console.log(workeraverageAge);
+const sumofworkerage = namesofworkers.reduce((acc, curr) => acc + curr.age, 0);
+console.log(sumofworkerage/namesofworkers.length);
+//OR
+const averageAgeofWorkers = sumofworkerage/namesofworkers.length;
+console.log(averageAgeofWorkers);
 
 //TO PRINT THE ARRAY OF WORKERS THAT ARE ABOVE THE AGE OF 20
 console.log("WORKERS THAT ARE ABOVE THE AGE OF 20");
-let over = namesofworkers.filter(over => over.age > 20);
-console.log(over);
+let above20 = namesofworkers.filter(above => above.age > 20);
+console.log(above20);
 
 //TO PRINT NEW SALARIES OF THE WORKERS
 console.log("NEW SALARIES OF THE WORKERS");
@@ -384,16 +380,26 @@ namesofworkers.map(newsalary => newsalary.salary * 2).forEach(newsalary => (cons
 
 // FUNCTION THAT TAKE ARRAY OF NUMBER AS A PARAMETER...
 console.log("FUNCTION THAT TAKE ARRAY OF NUMBER AS A PARAMETER...");
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const f1AndLast = (array) => `${array[0]} and ${array.length}`;
-console.log(f1AndLast(array));
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15];
+const firstAndLast = (array) => {
+return `${array[0]} ${array.length}`};
+console.log(firstAndLast(array));
 
 //FUNCTION THAT ACCEPTS AN OBJECT AS A PARAMETER...
+
+//new object
+let obj = {
+    firstName : "Vanessa" ,
+    lastName : "Rogers" ,
+    gender : "Female" ,
+    age : 19,
+    salary : 60193};
+
 console.log("FUNCTION THAT ACCEPTS AN OBJECT AS A PARAMETER...");
-let Response = (obj) => `Your name is ${obj.firstName} ${obj.lastName}, you are a female and your current salary is $${obj.salary}`;
+const Response = (obj) => `Your name is ${obj.firstName} ${obj.lastName}, you are a ${obj.gender} and your current salary is $${obj.salary}`;
 console.log(Response(obj));
 
 //FUNCTION THAT TAKES IN 2 PARAMETER...
 console.log("FUNCTION THAT TAKES IN 2 PARAMETER...");
-const wooow = (name, score) => `Hello ${name}, your score is ${score}`;
-console.log(wooow("Teni", 500));
+const uyoMeyo = (name, score) => `Hello ${name}, your score is ${score}`;
+console.log(uyoMeyo("Teni", 500));
